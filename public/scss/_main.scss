@@ -1,0 +1,138 @@
+.uk-container {
+	box-sizing: border-box;
+}
+
+body {
+	-webkit-font-smoothing: antialiased;
+	-webkit-tap-highlight-color: transparent;
+	-webkit-text-size-adjust: 100%;
+}
+
+.header {
+	height: 70px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+
+	&-link {
+		line-height: 70px;
+		padding: 0 15px;
+
+		&:first-child {
+			margin-left: -15px;
+			text-decoration: none;
+
+			&:hover {
+				background-color: rgba(255, 255, 255, 0.1) !important;
+			}
+		}
+	}
+}
+
+.bg-dark-transparent {
+	background: rgba(0, 0, 0, 0.5);
+}
+
+.bg-main {
+	background-image: url("../i/bg.jpg");
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-attachment: fixed;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+#root,
+.wrapper,
+body,
+html {
+	height: 100%;
+	overflow: hidden;
+}
+
+.wrapper {
+	padding-top: 70px;
+}
+
+.content {
+	height: 100%;
+	overflow: auto;
+    -webkit-overflow-scrolling: touch
+}
+
+.editable {
+	height: 40px;
+
+	> *:not(input) {
+		display: inline-block;
+		cursor: pointer;
+		border-bottom: 1px dashed #a2a2a2;
+	}
+}
+
+.heroes-grid {
+    font-size: 0;
+	margin: -5px -5px 0;
+	.hero {
+		position: relative;
+        cursor: pointer;
+        display: inline-block;
+        vertical-align: top;
+        width: 16.66667%;
+        margin-bottom: 5px;
+        @media screen and (min-width:767px){
+            width:10%;
+        }
+        @media screen and (min-width:900px){
+            width:8.3333%;
+        }
+        @media screen and (min-width:1200px){
+            width:6.6667%;
+        }
+        a{
+            position: absolute;
+            left: 5px;
+            right: 5px;
+            top: 5px;
+        }
+        &:after{
+            content: "";
+            display: block;
+            padding-bottom: 56.0823%;
+        }
+        img{
+            display: block;
+            min-width: 100%;
+        }
+        .icon {
+            &-attr {
+                position: absolute;
+				display: none;
+                top: 0;
+                right: 0;
+                width: 20px;
+                height: 20px;
+                background-repeat: no-repeat;
+                background-size: 100%;
+                background-position: center;
+                @media screen and (max-width:415px){
+                    width: 10px;
+                    height: 10px;
+                }
+                &.str{
+                    background-image: url(../i/icons/attr/str.png);
+                }
+                &.int{
+                    background-image: url(../i/icons/attr/int.png);
+                }
+                &.agi{
+                    background-image: url(../i/icons/attr/agi.png);
+                }
+            }
+        }
+	}
+}

@@ -1,2 +1,1 @@
-# react--react-router-redux-uikit-starter
-React + React-router + Redux + UIKit starter pack
+**React + React-router + Redux + UIKit + Node(Express) starter project**
